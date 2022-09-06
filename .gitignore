@@ -2,3 +2,8 @@ efficientvit_l3_300d/
 __pycache__
 *.pyc
 .vscode
+Combined-data
+*.json
+EfficientFormer/*
+EfficientFormer/efficientformer_l7_coco.pth
+*/data/*

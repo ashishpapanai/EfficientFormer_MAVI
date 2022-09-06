@@ -10,7 +10,7 @@ model = dict(
         style='pytorch',
         init_cfg=dict(
             type='Pretrained',
-            checkpoint='../weights/efficientformer_l7_300d.pth',
+            checkpoint='./EfficientFormer/efficientformer_l7_coco.pth',
             ),
         ),
     neck=dict(

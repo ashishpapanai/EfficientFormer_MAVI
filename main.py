@@ -21,11 +21,11 @@ from models import *
 def get_args_parser():
     parser = argparse.ArgumentParser(
         'EfficientFormer training and evaluation script', add_help=False)
-    parser.add_argument('--batch-size', default=128, type=int)
+    parser.add_argument('--batch-size', default=8, type=int)
     parser.add_argument('--epochs', default=300, type=int)
 
     # Model parameters
-    parser.add_argument('--model', default='efficientformer_l1', type=str, metavar='MODEL',
+    parser.add_argument('--model', default='efficientformer_l7', type=str, metavar='MODEL',
                         help='Name of model to train')
     parser.add_argument('--input-size', default=224,
                         type=int, help='images input size')
@@ -133,11 +133,11 @@ def get_args_parser():
     parser.add_argument('--distillation-tau', default=1.0, type=float, help="")
 
     # * Finetuning params
-    parser.add_argument('--finetune', default='',
+    parser.add_argument('--finetune', default='EfficientFormer/efficientformer_l7_coco.pth',
                         help='finetune from checkpoint')
 
     # Dataset parameters
-    parser.add_argument('--data-path', default='./imagenet', type=str,
+    parser.add_argument('--data-path', default='detection/data/MAVI', type=str,
                         help='dataset path')
     parser.add_argument('--data-set', default='IMNET', choices=['CIFAR', 'IMNET', 'INAT', 'INAT19'],
                         type=str, help='Image Net dataset path')
